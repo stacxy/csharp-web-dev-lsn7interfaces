@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace IceCreamShop
 {
     public class ConeComparer : IComparer<Cone>
-    { }
-
-    public ConeComparer()
     {
-    }
-
-    public int Compare(Cone x, Cone y)
-    {
+        //public int Compare([AllowNull] Cone x, [AllowNull] Cone y)
+        //{
+        //    throw new NotImplementedException();
+        //}
+     
+        public int Compare(Cone x, Cone y)
+        { 
         double diff = x.Cost - y.Cost;
         if(diff == 0)
         {
@@ -28,6 +29,6 @@ namespace IceCreamShop
         }
         }
 
-    
     }
+
 }
